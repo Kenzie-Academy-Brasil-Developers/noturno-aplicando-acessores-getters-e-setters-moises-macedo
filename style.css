@@ -1,0 +1,102 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+body{
+    text-align: center;
+    
+}
+
+
+
+.containerGeral{
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.main{
+    width: 30%;
+    max-width: 300px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+
+
+}
+
+#form{
+    background-color: rgb(202, 201, 201);
+    margin: auto;
+   
+}
+
+#name{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 25px;
+
+}
+
+#birthDate{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 25px;
+
+}
+
+#cpf{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 25px;
+}
+
+#phone{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 25px;
+}
+
+#cellphone{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 25px;
+
+}
+
+#pis{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 25px;
+
+}
+#btnSubmit{
+    border: 1px solid rgb(185, 185, 185);
+    width: 300px;
+    height: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+
+.li{
+    text-align: left;
+    border: 1px solid white;
+    
+    
+    height: 30px;
+    background-color: rgb(175, 175, 175);
+    font-weight: 60;
+
+}
+
