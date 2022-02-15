@@ -1,4 +1,5 @@
 class Humano {
+
     constructor(nome, dataNascimento, CPF, Telefone, Celular, Pis, Estuda){
 
         this._nome = nome;
@@ -12,14 +13,16 @@ class Humano {
 
     ////////////////////////////////////////////
 
-    get aNome (){
-        return this._nome.value
+    get nome (){
+        return this._nome
     }
 
 
-    set aNome (setNome){         
+    set nome (nome){     
 
-        const splitNome = setNome.split(' ');
+         
+
+        const splitNome = nome.split(' ');
 
         let arrayNome = [];
 
@@ -32,21 +35,21 @@ class Humano {
         }
 
         this._nome = arrayNome.join(' ')
-
+        
     }
 
     ////////////////////////////////////////////
 
 
 
-    get aDataNascimeno (){
+    get dataNascimeno (){
 
-        return this._dataNascimento.value
+        return this._dataNascimento
     }
 
-    set aDataNascimeno (setDataNascimento){
+    set dataNascimeno (dataNascimento){
 
-        const reverseDataNascimento = setDataNascimento.reverse();
+        const reverseDataNascimento = dataNascimento.reverse();
 
         this._dataNascimento = reverseDataNascimento
 
@@ -55,84 +58,130 @@ class Humano {
 
     ////////////////////////////////////////////
 
-    get aCPF (){
+    get CPF (){
         return this._CPF.value
     }
 
 
 
-    set aCPF (setCPF){
+    set CPF (CPF){
 
-        const splitCPF = setCPF.split('').replece(/./g).join(' ');
+        const cpfTratado = this._CPF.split('');
 
-        this._CPF = splitCPF
+        let array = [];
+
+        for(let contador = 0; contador <cpfTratado.length; contador++){
+
+            let index = cpfTratado[contador];
+            if(index !== "." || index !== "-"){
+                array.push(index)
+            }
+
+        }       
+
+        return array.join('')
+
+        
 
     }
     ////////////////////////////////////////////
 
-    get aTelefone (){
+    get Telefone (){
 
         return this._Telefone.value
     }
 
 
 
-    set aTelefone (setTelefone){
+    set Telefone (Telefone){
 
-        const splitTelefone = setTelefone.split('').replece(/-/g).join(' ');
+        const telefoneTratado = this._Telefone.split('');
 
-        this._Telefone = splitTelefone
+        let array = [];
+
+        for(let contador = 0; contador <telefoneTratado.length; contador++){
+
+            let index = telefoneTratado[contador];
+            if(index !== "." || index !== "-"){
+                array.push(index)
+            }
+
+        }       
+
+        return array.join('')
 
     }
 
     ////////////////////////////////////////////
 
-    get aCelular (){
+    get Celular (){
 
         return this._Celular.value
     }
 
 
 
-    set aCelular (setCelular){
+    set Celular (Celular){
 
-        const splitCelular  = setCelular.split('').replece(/-/g).join(' ');
+        const celularTratado = this._Celular.split('');
 
-        this._Celular  = splitCelular 
+        let array = [];
+
+        for(let contador = 0; contador <celularTratado.length; contador++){
+
+            let index = celularTratado[contador];
+            if(index !== "." || index !== "-"){
+                array.push(index)
+            }
+
+        }       
+
+        return array.join('')
 
     }
 
     ////////////////////////////////////////////
 
-    get aPis (){
+    get Pis (){
 
         return this._Pis.value
     }
 
 
 
-    set aPis (setPis){
+    set Pis (Pis){
 
-        const splitPis  = setPis.split('').replece(/./g).join(' ');
+        const PisTratado = this._Pis.split('');
 
-        this._Pis = splitPis 
+        let array = [];
+
+        for(let contador = 0; contador <PisTratado.length; contador++){
+
+            let index = PisTratado[contador];
+            if(index !== "." || index !== "-"){
+                array.push(index)
+            }
+
+        }       
+
+        return array.join('')
 
     }
 
     ////////////////////////////////////////////
 
-    get aEstuda (){
+    get Estuda (){
 
         return this._Estuda.checked
     }
 
 
 
-    set aEstuda (setEstuda){
+    set Estuda (Estuda){
 
-        this._Estuda = setEstuda
+        this._Estuda = Estuda
 
-        if(setEstuda === true){
+        if(Estuda === true){
 
             return "Estudante: 'Sim' "
         }
@@ -145,4 +194,7 @@ class Humano {
 
 }
 
-export default Humano
+let moises = new Humano ('moises', "25/01/1996",'700.000.000-99', '4199999-8888')
+
+console.log(moises)
+
