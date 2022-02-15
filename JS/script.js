@@ -194,7 +194,5 @@ class Humano {
 
 }
 
-let moises = new Humano ('moises', "25/01/1996",'700.000.000-99', '4199999-8888')
-
-console.log(moises)
+export default Humano
 
